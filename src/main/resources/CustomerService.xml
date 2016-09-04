@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <bean id="customerEntityDao" class="se.so4it.learn.daoImpl.CustomerEntityDaoImpl"/>
+
+    <bean id="customerService" class="se.so4it.learn.serviceImpl.ServiceImpl">
+        <constructor-arg name="customerEntityDao" ref="customerEntityDao"/>
+    </bean>
+
+
+    <bean id="service" class="se.so4it.learn.client.ClientCustomerImp">
+        <constructor-arg name="customerService" ref="customerService"/>
+    </bean>
+
+
+</beans>
+
