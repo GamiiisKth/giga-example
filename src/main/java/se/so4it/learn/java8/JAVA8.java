@@ -1,5 +1,6 @@
-package se.so4it.learn.common;
+package se.so4it.learn.java8;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,10 +11,15 @@ import java.util.function.Predicate;
  */
 public class JAVA8 {
 
+    private static  String name;
 
     public static void main(String[] args) {
 
-        List<String> names = new ArrayList<>();
+
+         name= "Ali";
+        getFiled(name);
+
+   /*     List<String> names = new ArrayList<>();
         names.add("Mahesh");
         names.add("Suresh");
         names.add("Ramesh");
@@ -25,6 +31,16 @@ public class JAVA8 {
 
         //   eval(list, n -> n > 3);
         eval(list, n -> n % 2 == 0);
+*/
+
+    }
+
+
+    public static void getFiled(String s1){
+
+            Field [] field=JAVA8.class.getFields();
+            System.out.println(Arrays.toString(field));
+
 
     }
 
@@ -45,6 +61,4 @@ public class JAVA8 {
             }
         }
     }
-
-
 }
