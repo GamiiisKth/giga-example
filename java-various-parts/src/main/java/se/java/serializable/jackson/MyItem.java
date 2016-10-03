@@ -1,4 +1,4 @@
-package se.java.serializable;
+package se.java.serializable.jackson;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
