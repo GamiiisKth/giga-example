@@ -1,4 +1,4 @@
-package se.java.serializable;
+package se.java.serializable.jackson;
 
 /**
  * @author Ali yusha {@literal <mailto:ali.yusha@so4it.com>}
