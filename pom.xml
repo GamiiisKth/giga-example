@@ -16,13 +16,7 @@
         <module>java-8-in-Action</module>
     </modules>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <asciidoctor.maven.plugin.version>1.5.3</asciidoctor.maven.plugin.version>
-        <asciidoctorj.version>1.5.4</asciidoctorj.version>
-        <jruby.version>1.7.21</jruby.version>
-    </properties>
+
 
 
     <build>
@@ -39,86 +33,6 @@
                         <testTarget>1.8</testTarget>
                     </configuration>
                 </plugin>
-                <!--
-              Asciidoc links to images in .adoc files using image:Example.png. If the {imagesDir} variable is set
-              it will prefix the image link like this image:{imagesDir}/Example.png.
-
-              When authoring the .adoc files we are using the Atom Asciidoc plugin (some uses the IntelliJ plugin).
-              Both of these plugins does NOT honor the {imagesDir} variable, which means the images
-              wont show in the editor view while authoring the .adoc files.
-
-              To get the exact same behavior when authoring as when we are publishing the site we set the
-              imagesDir to empty and create all our image links relative to where the .adoc file is located.
-
-              The site plugin will copy all directories from src/site/asciidoc directly to the root of the site
-              so all image links will work
-
-              The Asciidotctor pugins for Atom and IntelliJ will link relative to where the .adoc file is loacted
-              so all image links will work.
-          -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.4</version>
-                    <configuration>
-                        <generateReports>true</generateReports>
-                        <generateSitemap>true</generateSitemap>
-                        <relativizeDecorationLinks>false</relativizeDecorationLinks>
-                        <locales>en</locales>
-                        <inputEncoding>UTF-8</inputEncoding>
-                        <outputEncoding>UTF-8</outputEncoding>
-                        <asciidoc>
-                            <attributes>
-                                <icons>font</icons>
-                                <source-highlighter>pretty-print</source-highlighter>
-                                <sourcesDirectory>../../main/java</sourcesDirectory>
-                                <testSourcesDirectory>../../test/java</testSourcesDirectory>
-                                <maven>false</maven>
-                            </attributes>
-                        </asciidoc>
-                    </configuration>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.asciidoctor</groupId>
-                            <artifactId>asciidoctor-maven-plugin</artifactId>
-                            <version>${asciidoctor.maven.plugin.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.jruby</groupId>
-                            <artifactId>jruby-complete</artifactId>
-                            <version>${jruby.version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.asciidoctor</groupId>
-                            <artifactId>asciidoctorj</artifactId>
-                            <version>${asciidoctorj.version}</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-
-
-                <!--
-                    Copies images from src/site/asciidoc/images to target/site/images
-                -->
-                <plugin>
-                    <artifactId>maven-antrun-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <phase>pre-site</phase>
-                            <configuration>
-                                <tasks>
-                                    <copy toDir="target/site/images">
-                                        <fileset dir="${basedir}/src/site/asciidoc/images"/>
-                                    </copy>
-                                </tasks>
-                            </configuration>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
             </plugins>
         </pluginManagement>
     </build>
