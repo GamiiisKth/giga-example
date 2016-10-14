@@ -1,0 +1,45 @@
+ifndef::maven[]
+include::../atom.adoc[]
+endif::maven[]
+
+=== Description of chapter 1
+
+
+[source,java]
+----
+include::{sourcesDirectory}/lambdasinaction/chap1/FilteringApples.java[]
+----
+<1> Passing methods as values is clearly useful
+but it’s a bit annoying having to write a definition
+for short methods such as isHeavyApple and isGreenApple.
+
+<2> But Java 8 has solved this too. It introduces a new notation
+(anonymous functions, or lambdas) that enables you to write just as 2.
+
+<3> Java 8 instead contains a whole new Collections-like API called
+Streams, containing a comprehensive set of operations similar to
+filter that functional programmers may be familiar with
+(for example, map, reduce).
+
+=== Streams
+instead of using
+static <T> Collection<T> filter(Collection<T> c, Predicate<T> p);
+for filtering apples like
+filter(inventory, (Apple a) -> a.getWeight() > 150 );
+we can use streams (look point 3 ).
+this will be showed on GroupingTransactions class.
+
+For now it’s worth noticing that the Streams API provides a
+very different way to process data in comparison to the Collections API.
+Using a collection, you’re managing the iteration process yourself
+You need to iterate through each element one by one using a for-each
+loop and then process the elements (external iteration).
+In contrast, using the Streams API you don’t need to think in terms of loops at all.
+the data processing happens internally inside the library.
+
+
+=== ParallelStream
+import static java.util.stream.Collectors.toList +
+List<Apple> heavyApples =inventory.parallelStream()
+.filter((Apple a) -> a.getWeight() > 150) .collect(toList());
+

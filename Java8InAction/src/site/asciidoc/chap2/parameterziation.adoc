@@ -1,0 +1,20 @@
+=== Chapter 2
+page 37
+
+* Coping with changing requirements
+* Behavior parameterization
+* Anonymous classes
+* Preview of lambda expressions
+* Real-world examples: Comparator, Runnable, and GUI
+
+==== requirement changes
+
+Behavior parameterization is a software development +
+pattern that lets you handle frequent requirement changes
+
+=== 2.2. Behavior parameterization
+page 41
+
+hich lets you define a family of algorithms, encapsulate each algorithm (called a strategy),
+
+See http://en.wikipedia.org/wiki/Strategy_pattern.

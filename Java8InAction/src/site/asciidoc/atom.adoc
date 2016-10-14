@@ -1,0 +1,2 @@
+:sourcesDirectory: ../../../main/java
+:testSourcesDirectory: ../../../test/java
