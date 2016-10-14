@@ -1,0 +1,18 @@
+<project>
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.5</version>
+    </skin>
+    <custom>
+        <fluidoSkin>
+            <topBarEnabled>true</topBarEnabled>
+            <sideBarEnabled>false</sideBarEnabled>
+        </fluidoSkin>
+    </custom>
+    <body>
+        <menu name="Release notes">
+            <item href="chap1/ReleaseNotes001.html" name="v0.0.1"/>
+        </menu>
+    </body>
+</project>

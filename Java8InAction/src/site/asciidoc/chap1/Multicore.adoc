@@ -1,0 +1,8 @@
+=== Multicore
+All new desktop and laptop computers are multicore computers.
+Instead of a single CPU, they have four or eight or more CPUs
+(usually called cores). The problem is that a classic
+Java program uses just a single one of these cores, and the
+power of the others is wasted.
+
+read more about this section on page 30.
