@@ -33,3 +33,59 @@ more concise for cases where you don’t have a convenient method and class avai
 
 . Programs using these concepts are said to be written in functional-programming style—this phrase means “writing programs
  that pass functions around as first-class values.”
+
+
+
+ ====
+ page 55
+ But you saw that using anonymous classes to represent different behaviors is unsatisfying: it’s
+ verbose, which doesn’t encourage programmers to use behavior parameterization in practice. In
+ this chapter, we teach you about a new feature in Java 8 that tackles this problem: lambda
+ expressions, which let you represent a behavior or pass code in a concise way. For now you can
+ think of lambda expressions as anonymous functions, basically methods without declared
+ names, but which can also be passed as arguments to a method as you can with an anonymous
+ class.
+
+(Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight());
+
+(parameters) -> expression
+or (note the curly braces for statements)
+(parameters) -> { statements; }
+
+
+
+=====
+
+Table 3.1. Examples of lambdas
+Use case Examples of lambdas
+A boolean expression                (List<String> list) -> list.isEmpty()
+
+Creating objects                    () -> new Apple(10)
+
+Consuming from an object            (Apple a) -> {
+                                    System.out.println(a.getWeight());
+                                    }
+
+Select/extract from an object           (String s) -> s.length()
+
+Combine two values                  (int a, int b) -> a * b
+
+Compare two objects                 (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight())
+
+
+===how to use lambda with own code
+A functional interface is an interface that specifies exactly one abstract method
+
+. An interface is still a functional interface if it has many default methods as long as it
+specifies only one abstract method.
+
+? Lambda expressions let you provide the
+implementation of the abstract method of a functional interface directly inline and treat the
+whole expression as an instance of a functional interface
+
+
+Table 3.2. Common functional interfaces in Java 8
+page 63
+Predicate<T>        T -> boolean IntPredicate, LongPredicate, DoublePredicate
+Consumer<T>         T -> void IntConsumer, LongConsumer, DoubleConsumer
+Function<T, R>
