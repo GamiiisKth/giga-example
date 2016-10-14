@@ -1,6 +1,5 @@
 package se.java.exception;
 
-import com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext;
 
 /**
  * @author Ali yusha {@literal <mailto:ali.yusha@so4it.com>}

@@ -1,0 +1,5 @@
+3.1.3 Transitioning to DI
+This section will highlight how code can be transitioned from using no IoC, to using a
+Factory  (or  Service  Locator)  style  implementation,  to  using
+DI.  A  key  technique
+behind much of this is coding to interfaces, a practice which allows for potential substitution of objects at runtime
