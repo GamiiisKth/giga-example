@@ -1,6 +1,6 @@
 package se.java.eight.lambda;
 
-import se.java.eight.parameterization.Apple;
+import se.java.eight.common.Apple;
 
 import java.util.Comparator;
 

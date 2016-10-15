@@ -1,6 +1,6 @@
 package se.java.eight.lambda.function.function;
 
-import se.java.eight.parameterization.Apple;
+import se.java.eight.common.Apple;
 
 import java.util.ArrayList;
 import java.util.Arrays;

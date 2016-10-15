@@ -1,4 +1,4 @@
-package se.java.eight.parameterization;
+package se.java.eight.common;
 
 /**
  * @author Ali yusha {@literal <mailto:ali.yusha@so4it.com>}

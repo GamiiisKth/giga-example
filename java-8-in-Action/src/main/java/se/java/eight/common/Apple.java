@@ -1,7 +1,8 @@
-package se.java.eight.parameterization;
+package se.java.eight.common;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 /**
  * @author Ali yusha {@literal <mailto:ali.yusha@so4it.com>}
@@ -21,6 +22,15 @@ public class Apple {
 
     public Apple(Integer weight) {
         this.weight = weight;
+    }
+
+
+    public Apple(Builder builder){
+        Function<Builder , Apple> =
+    }
+
+    public static Builder builder() {
+        return new Builder();
     }
 
     public Integer getWeight() {
@@ -82,6 +92,24 @@ public class Apple {
         System.out.println("---AppleFancyFormatter----");
 
         prettyPrintApple(inventory, new AppleFancyFormatter());
+    }
+
+    public static class Builder {
+        private int weight = 0;
+        private String color = "";
+
+        public Builder withWeight(int weight) {
+            this.weight = weight;
+            return this;
+        }
+
+
+        public Builder withColor(String color) {
+            this.color = color;
+            return this;
+        }
+
+
     }
 
 }
