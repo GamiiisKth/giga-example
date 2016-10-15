@@ -25,8 +25,11 @@ public class Lambda {
     public static void main(String[] args) {
 
         Thread thread = new Thread(() -> System.out.println("hello lambda"));
-
         thread.start();
+
+        /**
+         * different way to use lambda
+         */
 
         Runnable r1 = () -> System.out.println("Using lambda"); // using lambda
 
