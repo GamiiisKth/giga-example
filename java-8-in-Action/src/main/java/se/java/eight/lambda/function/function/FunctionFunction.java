@@ -46,13 +46,14 @@ public class FunctionFunction {
     List<Apple> apples = map(weights, Apple::new);
 
 
+
+
     public static void main(String[] args) {
         // test of generic map
         List<Integer> l = map(Arrays.asList("lambda", "test", "hej"), String::length);
         l.forEach(System.out::println);
+
     }
-
-
 
 
 }

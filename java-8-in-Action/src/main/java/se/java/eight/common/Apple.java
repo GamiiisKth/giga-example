@@ -2,7 +2,6 @@ package se.java.eight.common;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 /**
  * @author Ali yusha {@literal <mailto:ali.yusha@so4it.com>}
@@ -24,10 +23,12 @@ public class Apple {
         this.weight = weight;
     }
 
-
-    public Apple(Builder builder){
-        Function<Builder , Apple> =
+    public Apple(Builder builder) {
+        this.weight = builder.weight;
+        this.color = builder.color;
     }
+
+
 
     public static Builder builder() {
         return new Builder();
@@ -109,6 +110,9 @@ public class Apple {
             return this;
         }
 
+        public Apple build(){
+            return new Apple(this);
+        }
 
     }
 
