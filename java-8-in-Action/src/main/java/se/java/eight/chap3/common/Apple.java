@@ -1,4 +1,4 @@
-package se.java.eight.common;
+package se.java.eight.chap3.common;
 
 import java.util.Arrays;
 import java.util.List;

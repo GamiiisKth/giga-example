@@ -1,6 +1,6 @@
-package se.java.eight.parameterization;
+package se.java.eight.chap3.common.parameterization;
 
-import se.java.eight.common.Apple;
+import se.java.eight.chap3.common.Apple;
 
 import java.util.ArrayList;
 import java.util.Arrays;

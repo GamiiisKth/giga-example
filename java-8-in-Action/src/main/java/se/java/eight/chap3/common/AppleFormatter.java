@@ -1,4 +1,4 @@
-package se.java.eight.common;
+package se.java.eight.chap3.common;
 
 /**
  * @author Ali yusha {@literal <mailto:ali.yusha@so4it.com>}

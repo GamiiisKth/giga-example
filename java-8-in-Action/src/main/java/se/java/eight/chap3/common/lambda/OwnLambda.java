@@ -1,4 +1,4 @@
-package se.java.eight.lambda;
+package se.java.eight.chap3.common.lambda;
 
 /**
  * @author Ali yusha {@literal <mailto:ali.yusha@so4it.com>}

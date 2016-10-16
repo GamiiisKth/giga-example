@@ -1,4 +1,4 @@
-package se.java.eight.lambda.function.function;
+package se.java.eight.chap3.common.lambda.function.function;
 
 import java.util.function.Function;
 

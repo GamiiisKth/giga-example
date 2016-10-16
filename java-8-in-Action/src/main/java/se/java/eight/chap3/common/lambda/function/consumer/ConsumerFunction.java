@@ -1,4 +1,4 @@
-package se.java.eight.lambda.function.consumer;
+package se.java.eight.chap3.common.lambda.function.consumer;
 
 import java.util.ArrayList;
 import java.util.List;

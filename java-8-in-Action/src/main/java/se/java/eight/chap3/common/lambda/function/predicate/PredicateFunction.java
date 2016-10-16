@@ -1,6 +1,6 @@
-package se.java.eight.lambda.function.predicate;
+package se.java.eight.chap3.common.lambda.function.predicate;
 
-import se.java.eight.common.Apple;
+import se.java.eight.chap3.common.Apple;
 
 import java.util.function.Predicate;
 
