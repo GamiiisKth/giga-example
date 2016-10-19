@@ -32,5 +32,12 @@ public class StreamBasedOnDish {
                 collect(Collectors.toList());
 
         threeHeightCaloricDishName.forEach( System.out::println);
+
+        System.out.println("out during operation");
+
+        /**
+         * page 114 you can do other operation during filter , map limit operation
+         */
+        
     }
 }
