@@ -38,6 +38,6 @@ public class StreamBasedOnDish {
         /**
          * page 114 you can do other operation during filter , map limit operation
          */
-        
+
     }
 }

@@ -14,6 +14,7 @@
         <module>giga-example</module>
         <module>well-grounded-java</module>
         <module>java-8-in-Action</module>
+        <module>test</module>
     </modules>
 
 
