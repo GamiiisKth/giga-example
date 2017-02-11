@@ -6,18 +6,14 @@
 
     <parent>
         <groupId>se.so4it.learn</groupId>
-        <artifactId>java-learn-parent</artifactId>
+        <artifactId>test</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>java-Reflection</artifactId>
+    <artifactId>test-junit</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>se.lendo.test</groupId>
-            <artifactId>lendo-integration-googleplace-api-client</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+
+
+    
 </project>

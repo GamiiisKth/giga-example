@@ -54,5 +54,13 @@ public class StreamBasedOnDish {
 
     private static void systemOutPutOfList(List<?> e) {
         e.forEach(System.out::println);
+        threeHeightCaloricDishName.forEach( System.out::println);
+
+        System.out.println("out during operation");
+
+        /**
+         * page 114 you can do other operation during filter , map limit operation
+         */
+
     }
 }

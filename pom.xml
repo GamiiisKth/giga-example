@@ -16,6 +16,8 @@
         <module>java-8-in-Action</module>
         <module>metric</module>
         <module>java-reflection</module>
+        <module>test</module>
+        <module>java-Reflection</module>
     </modules>
 
 
