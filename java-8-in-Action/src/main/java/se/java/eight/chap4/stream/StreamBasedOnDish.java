@@ -23,14 +23,36 @@ public class StreamBasedOnDish {
             new Dish("prawns", false, 300, Type.FISH),
             new Dish("salmon", false, 450, Type.FISH));
 
-    public static void main(String[] args) {
 
+    private static void filterByStream() {
+        List<Dish> isVegeterians = menu.stream().filter(Dish::isVegetarian).
+                collect(Collectors.toList());
+
+        System.out.println("filterByStream");
+        systemOutPutOfList(isVegeterians);
+
+    }
+
+    private static void filterMapLimit() {
         List<String> threeHeightCaloricDishName = menu.
                 stream().filter(dish -> dish.getCalories() > 300).
                 map(Dish::getName).
                 limit(3).
                 collect(Collectors.toList());
 
-        threeHeightCaloricDishName.forEach( System.out::println);
+        System.out.println("\nthreeHeightCaloricDishName");
+        systemOutPutOfList(threeHeightCaloricDishName);
+    }
+
+    public static void main(String[] args) {
+
+        filterByStream();
+        filterMapLimit();
+
+    }
+
+
+    private static void systemOutPutOfList(List<?> e) {
+        e.forEach(System.out::println);
     }
 }

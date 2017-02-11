@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="counter" class=" com.codahale.metrics.Counter"/>
+
+    <bean id="meter" class=" com.codahale.metrics.Meter"/>
+
+    <bean id="metricRegistry" class=" com.codahale.metrics.MetricRegistry"/>
+
+
+
+    <!--<bean id="fibonacciSeriesBuilder" class="metric.util.FibonacciSeries$Builder">
+        <constructor-arg name="meter" ref="meter"/>
+        <constructor-arg name="consumerMeter" ref="meter"/>
+        <constructor-arg name="pendingJobs" ref="counter"/>
+        <constructor-arg name="metricRegistry" ref="metricRegistry">
+        </constructor-arg>
+    </bean>
+
+    <bean id="fibonacciSeries" class="metric.util.FibonacciSeries">
+        <constructor-arg ref="fibonacciSeriesBuilder"/>
+    </bean>
+-->
+    <bean id="fibonacciSeries" class="metric.util.FibonacciSeries"/>
+
+</beans>
